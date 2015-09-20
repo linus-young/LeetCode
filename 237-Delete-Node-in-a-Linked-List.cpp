@@ -17,6 +17,10 @@ public:
         node.next = node.next.next;
 
         // should I delete the node after the node we want to delete?
+        // Free the node(in this case, pointed to 4)
+        ListNode *temp = node->next;
+        *node = *temp;
+        delete temp;
     }
 };
 
